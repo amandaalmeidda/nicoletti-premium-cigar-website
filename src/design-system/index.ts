@@ -1,12 +1,11 @@
 /**
  * Nicoletti Premium Cigar — Design System
  *
- * Client-specific design tokens layered on top of the Olmeda agency
- * design system. Import from this barrel rather than reaching into
- * individual token files.
+ * Centralized export of all design tokens.
+ * Reference: /design-system/ (JSON source files)
  */
 
-export { colors, brand, neutral, semantic } from './colors';
+export { colors } from './colors';
 export type { Colors } from './colors';
 
 export {
@@ -17,3 +16,6 @@ export {
   lineHeight,
 } from './typography';
 export type { Typography } from './typography';
+
+export { spacing } from './spacing';
+export type { Spacing } from './spacing';

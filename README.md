@@ -1,103 +1,183 @@
 # Nicoletti Premium Cigar Website
 
-The official website project for **Nicoletti Premium Cigar** — built on the Olmeda client website blueprint with integrated design system support.
+The official website for **Nicoletti Premium Cigar** — a luxury-focused website with a complete design system, static design assets, and production-ready React implementation.
 
-## Overview
+## 🎯 Overview
 
-This project combines:
+This project consolidates design, branding, and implementation in a single repository:
 
-- A **Next.js + TypeScript** application shell
-- A **two-layer design system** (agency base + Nicoletti Premium Cigar custom layer)
-- A pragmatic source layout for pages, components, styles, and utilities
-- A dedicated `design/` folder that hosts brand and design assets, intended to be served via GitHub Pages once populated
+- **Design System** — Complete brand tokens (colors, typography, spacing, components)
+- **Static Design** — HTML/CSS design templates and brand assets
+- **React Implementation** — Production Next.js application with design system integration
 
-## Structure
+---
+
+## 📁 Project Structure
 
 ```
-design/                  # Static design assets (HTML/CSS, mocks, brand guidelines)
-                         # Will be served via GitHub Pages once content is added
-src/
-├── design-system/       # Nicoletti Premium Cigar design tokens & components
-│   ├── colors.ts
-│   ├── typography.ts
-│   └── index.ts
-├── pages/               # Website pages
-├── components/          # Reusable components
-├── styles/              # Global styles
-├── lib/                 # Utilities
-└── types/               # TypeScript types
+nicoletti-premium-cigar-website/
+├── design-system/               # Brand design tokens (JSON)
+│   ├── colors.json              # Color palette
+│   ├── typography.json          # Fonts and typography scale
+│   ├── spacing.json             # Spacing tokens
+│   ├── components.json          # Component specifications
+│   └── README.md                # Design system documentation
+│
+├── design/                       # Static HTML/CSS design templates
+│   ├── README.md                # Designer guide
+│   └── assets/                  # Images, fonts, icons
+│
+├── src/                         # React/Next.js implementation
+│   ├── design-system/           # TypeScript interfaces for tokens
+│   │   ├── colors.ts
+│   │   ├── typography.ts
+│   │   ├── spacing.ts
+│   │   └── index.ts
+│   ├── pages/                   # Website pages
+│   ├── components/              # React components
+│   ├── styles/                  # Global styles
+│   ├── lib/                     # Utilities
+│   └── types/                   # TypeScript types
+│
+├── package.json
+├── next.config.js
+├── tsconfig.json
+└── README.md                    # This file
 ```
 
-## Design System
+---
 
-This project uses a two-layer design system so Nicoletti Premium Cigar brand customization stays decoupled from shared agency infrastructure:
+## 🎨 Design System
 
-1. **Agency Base** (`@olmeda/design-system`)
-   - Shared colors, spacing, typography
-   - Base component structure
-   - Updated centrally and consumed by all client projects
+All brand tokens are defined in `/design-system/` as JSON files:
 
-2. **Nicoletti Premium Cigar Custom** (`src/design-system/`)
-   - Nicoletti Premium Cigar brand colors, typography, and tokens
-   - Custom components specific to Nicoletti Premium Cigar
-   - Overrides and extensions to the agency base
+| File | Purpose |
+|------|---------|
+| `colors.json` | Primary, secondary, neutral, and semantic colors |
+| `typography.json` | Font families, sizes, weights, and line heights |
+| `spacing.json` | Spacing scale (padding, margin, gaps) |
+| `components.json` | Component definitions and variants |
 
-## Getting Started
+### Token Usage
 
-### 1. Install dependencies
+**For Designers:**
+- Edit JSON files in `/design-system/`
+- Reference tokens in `/design` HTML/CSS
+- Keep design consistent across all pages
+
+**For Developers:**
+- Convert tokens to CSS variables or Tailwind
+- Implement React components matching `/design` templates
+- Ensure design intent is preserved in code
+
+---
+
+## 🔄 Design-to-Development Workflow
+
+1. **Designer finalizes** tokens in `/design-system/`
+2. **Designer creates** static HTML/CSS in `/design/`
+3. **GitHub Pages** automatically deploys design preview
+4. **Developer references** design at GitHub Pages URL
+5. **Developer implements** React components in `/src/`
+6. **Consistency check** — static design and React implementation match
+
+---
+
+## 🚀 Getting Started
+
+### Installation
 
 ```bash
 npm install
 ```
 
-### 2. Customize the design system
+### Development
 
-Edit the files in `src/design-system/` to reflect Nicoletti Premium Cigar brand:
-
-- `src/design-system/colors.ts` — brand and semantic colors
-- `src/design-system/typography.ts` — fonts, sizes, weights
-- `src/design-system/index.ts` — exports
-
-### 3. Drop in design assets
-
-Place HTML / CSS mocks and brand assets into `design/`. Once content is added, GitHub Pages can be enabled to serve this folder.
-
-## Development
-
+**View static design (HTML/CSS):**
 ```bash
-npm run dev
+# Requires http-server
+npm run serve:design
+# Opens http://localhost:8000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+**Run React development server:**
+```bash
+npm run dev
+# Opens http://localhost:3000
+```
 
-## Building
+### Build & Deploy
 
 ```bash
 npm run build
 npm start
 ```
 
-## Scripts
+---
+
+## 📋 Scripts
 
 | Command | Purpose |
 |---------|---------|
-| `npm run dev` | Start the local development server |
-| `npm run build` | Create a production build |
-| `npm start` | Serve the production build |
-| `npm run lint` | Lint TypeScript/TSX sources |
-| `npm run format` | Format sources with Prettier |
+| `npm run dev` | Start Next.js dev server |
+| `npm run build` | Create production build |
+| `npm start` | Serve production build |
+| `npm run lint` | Lint TypeScript/TSX |
+| `npm run format` | Format code with Prettier |
+| `npm run serve:design` | Serve static design (HTML/CSS) |
 
-## Customizing the Design System
+---
 
-The two-layer approach lets Nicoletti Premium Cigar diverge visually from other client projects without forking the agency base:
+## 🎭 Design vs Implementation
 
-- For shared changes (used by every client) — open a PR to `@olmeda/design-system`
-- For Nicoletti Premium Cigar specific brand expression — edit `src/design-system/` locally in this project
+This project separates concerns clearly:
 
-## Brand Context
+| Aspect | Owner | Location |
+|--------|-------|----------|
+| Brand tokens | Designer | `/design-system/` |
+| Design mockups | Designer | `/design/` |
+| Implementation | Developer | `/src/` |
 
-Nicoletti Premium Cigar is a premium client brand. Treat brand voice, typography choices, and color decisions with the care a premium product deserves — every brand-facing surface should reinforce the premium positioning.
+The developer **always references** the designer's static design to ensure visual fidelity.
+
+---
+
+## 🔗 Design Preview
+
+Once GitHub Pages is enabled, the static design is available at:
+```
+https://amandaalmeidda.github.io/nicoletti-premium-cigar-website/
+```
+
+Share this link with stakeholders and developers for reference.
+
+---
+
+## 💡 Key Features
+
+✅ Centralized design tokens in JSON format  
+✅ Design-first workflow with static HTML/CSS templates  
+✅ GitHub Pages integration for design preview  
+✅ TypeScript for type-safe React components  
+✅ Separation of design and implementation concerns  
+✅ Production-ready Next.js setup  
+
+---
+
+## 📝 Next Steps
+
+1. **Finalize brand tokens** in `/design-system/`
+2. **Create design templates** in `/design/`
+3. **Enable GitHub Pages** in repository settings
+4. **Share design preview** with developer team
+5. **Implement React components** in `/src/`
+
+---
 
 ## License
 
 MIT
+
+**Project Created:** June 15, 2026  
+**Repository:** nicoletti-premium-cigar-website  
+**Status:** Consolidated and ready for development

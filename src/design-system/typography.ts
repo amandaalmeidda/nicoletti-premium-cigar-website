@@ -1,44 +1,41 @@
 /**
  * Nicoletti Premium Cigar — Typography
  *
- * Font families, sizes, and weights. Tune these once the Nicoletti
- * Premium Cigar typography decisions are made.
+ * Official typography scale for Nicoletti Premium Cigar.
+ * Source of truth: /design-system/typography.json
  */
 
 export const fontFamily = {
-  // Display / headlines — typically a refined serif for a premium cigar brand
-  display: '"Playfair Display", Georgia, serif',
-  // Body copy
-  body: '"Inter", system-ui, -apple-system, sans-serif',
-  // Monospace for technical text
-  mono: '"JetBrains Mono", "Fira Code", monospace',
+  heading: 'Georgia, serif',
+  body: 'Segoe UI, Roboto, sans-serif',
 } as const;
 
 export const fontSize = {
-  xs: '0.75rem',
-  sm: '0.875rem',
-  base: '1rem',
-  lg: '1.125rem',
-  xl: '1.25rem',
-  '2xl': '1.5rem',
-  '3xl': '1.875rem',
-  '4xl': '2.25rem',
-  '5xl': '3rem',
-  '6xl': '3.75rem',
+  xs: '12px',
+  sm: '14px',
+  base: '16px',
+  lg: '18px',
+  xl: '20px',
+  '2xl': '24px',
+  '3xl': '30px',
+  '4xl': '36px',
+  '5xl': '48px',
 } as const;
 
 export const fontWeight = {
-  regular: 400,
+  light: 300,
+  normal: 400,
   medium: 500,
   semibold: 600,
   bold: 700,
+  extrabold: 800,
 } as const;
 
 export const lineHeight = {
-  tight: 1.1,
-  snug: 1.3,
+  tight: 1.2,
   normal: 1.5,
-  relaxed: 1.7,
+  relaxed: 1.75,
+  loose: 2,
 } as const;
 
 export const typography = {

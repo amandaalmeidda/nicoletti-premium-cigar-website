@@ -1,0 +1,42 @@
+{
+  "buttons": {
+    "primary": {
+      "background": "#8B6F47",
+      "color": "#FAFAF8",
+      "padding": "12px 24px",
+      "fontSize": "16px",
+      "fontWeight": 600,
+      "borderRadius": "4px",
+      "states": {
+        "hover": "#5C4A2F",
+        "disabled": "#A89F8F"
+      }
+    },
+    "secondary": {
+      "background": "transparent",
+      "color": "#8B6F47",
+      "border": "2px solid #8B6F47",
+      "padding": "12px 24px",
+      "fontSize": "16px",
+      "fontWeight": 600,
+      "borderRadius": "4px"
+    }
+  },
+  "cards": {
+    "base": {
+      "borderRadius": "8px",
+      "boxShadow": "0 2px 8px rgba(0, 0, 0, 0.1)",
+      "padding": "24px"
+    }
+  },
+  "forms": {
+    "input": {
+      "background": "#FAFAF8",
+      "border": "1px solid #E8E4DB",
+      "borderRadius": "4px",
+      "padding": "12px 16px",
+      "fontSize": "16px",
+      "focusBorder": "#8B6F47"
+    }
+  }
+}
