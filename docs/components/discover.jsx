@@ -344,7 +344,7 @@ function ModelExplore({ models, activeId, onModel, onSeeDetail, onDiscover, mode
   const cards = [
     first,
     { img: next.hero, label: next.label, title: pick(next.headline), blurb: L("Continue pela coleção — outra referência, o mesmo critério.", "Continue through the collection — another reference, the same discernment."), action: () => onModel(next.id), cta: L("Explorar", "Explore") },
-    { img: "assets/photography/cigar-lighter-dark.jpeg", label: L("The Club", "The Club"), title: L("Não há ingresso. Há convite.", "There is no ticket. There is an invitation."), blurb: L("O acesso à Coleção Nicoletti começa por um encontro.", "Access to the Nicoletti Collection begins with a meeting."), action: () => navTo("The Club.html"), cta: L("Saber mais", "Learn more") },
+    { img: "assets/photography/lounge-interior.jpeg", label: L("The Club", "The Club"), title: L("Não há ingresso. Há convite.", "There is no ticket. There is an invitation."), blurb: L("O acesso à Coleção Nicoletti começa por um encontro.", "Access to the Nicoletti Collection begins with a meeting."), action: () => navTo("The Club.html"), cta: L("Saber mais", "Learn more") },
   ];
   return (
     <section className="surface-dark" data-screen-label="Discover — Explore Further" style={{ padding: "clamp(96px,11vw,150px) clamp(40px,6vw,96px)", boxSizing: "border-box" }}>

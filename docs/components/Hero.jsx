@@ -5,21 +5,21 @@ const { useState, useEffect, useRef } = React;
 
 const HERO_SLIDES = [
   {
-    img: "assets/photography/cigar-lighter-dark.jpeg",
+    img: "assets/photography/box-presentation.jpeg",
     video: "assets/video/hero-home-01.mp4",
     label: { pt: "A Coleção", en: "The Collection" },
     headline: { pt: ["Quatro famílias.", "Uma seleção privada."], en: ["Four families.", "A private selection."] },
     cta: { pt: "Descubra a coleção", en: "Discover the collection" }, link: "A Coleção.html",
   },
   {
-    img: "assets/photography/cigar-smoke-wood.jpeg",
+    img: "assets/photography/tobacco-field.jpeg",
     video: "assets/video/hero-home-02.mp4",
     label: { pt: "A Origem", en: "The Origin" },
     headline: { pt: ["Nascido em Cruz das Almas,", "no Recôncavo Baiano."], en: ["Born in Cruz das Almas,", "in the Recôncavo Baiano."] },
     cta: { pt: "Descubra a origem", en: "Discover the heritage" }, link: "Heritage.html",
   },
   {
-    img: "assets/photography/moment-lounge-hands.jpeg",
+    img: "assets/photography/lounge-interior.jpeg",
     video: "assets/video/hero-home-03.mp4",
     label: { pt: "Os Lounges", en: "The Lounges" },
     headline: { pt: ["Encontrado nas mesas", "mais exigentes do mundo."], en: ["Found at the most", "discerning tables in the world."] },

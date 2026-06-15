@@ -6,21 +6,21 @@ const { useState } = React;
 
 const EXPLORE_CARDS = [
   {
-    img: "assets/photography/cigar-smoke-wood.jpeg",
+    img: "assets/photography/box-presentation.jpeg",
     label: { pt: "A Coleção", en: "The Collection" },
     title: { pt: "Uma seleção privada", en: "A private selection" },
     blurb: { pt: "Quatro famílias, dez referências — a expressão sem concessões do critério de Franco Nicoletti.", en: "Four families, ten references — the uncompromising expression of Franco Nicoletti's discernment." },
     file: "A Coleção.html",
   },
   {
-    img: "assets/photography/moment-lounge-hands.jpeg",
+    img: "assets/photography/tobacco-field.jpeg",
     label: { pt: "A Origem", en: "The Origin" },
     title: { pt: "Cruz das Almas, Bahia", en: "Cruz das Almas, Bahia" },
     blurb: { pt: "Linhagem cubana, solo baiano — um terroir que eleva a folha a uma forma de arte.", en: "Cuban lineage, Bahian soil — a terroir that elevates the leaf to an art form." },
     file: "Heritage.html",
   },
   {
-    img: "assets/photography/cigar-lighter-dark.jpeg",
+    img: "assets/photography/lounge-interior.jpeg",
     label: { pt: "The Club", en: "The Club" },
     title: { pt: "Não há ingresso. Há convite.", en: "There is no ticket. There is an invitation." },
     blurb: { pt: "O acesso não se compra. Recebe-se — e começa por um encontro.", en: "Access is not bought. It is received — and it begins with a meeting." },

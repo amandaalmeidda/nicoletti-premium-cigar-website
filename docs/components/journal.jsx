@@ -2,11 +2,11 @@
 const { useState } = React;
 
 const ARTICLES = [
-  { id: "art-0", cat: "The Lounge", title: { pt: "Onde as noites não têm pressa", en: "Where the nights are in no hurry" }, img: "assets/photography/moment-lounge-hands.jpeg",
+  { id: "art-0", cat: "The Lounge", title: { pt: "Onde as noites não têm pressa", en: "Where the nights are in no hurry" }, img: "assets/photography/enjoy1.png",
     summary: { pt: "A arte de não apressar o fim de uma boa noite — sobre o tempo que o charuto exige, e entrega.", en: "The art of not hurrying the end of a good night — on the time the cigar asks for, and gives." } },
-  { id: "art-1", cat: "The Ritual", title: { pt: "O primeiro fósforo da noite", en: "The first match of the night" }, img: "assets/photography/cigar-smoke-wood.jpeg",
+  { id: "art-1", cat: "The Ritual", title: { pt: "O primeiro fósforo da noite", en: "The first match of the night" }, img: "assets/photography/ritual-cut.png",
     summary: { pt: "O acendimento não é uma formalidade. É o início de um contrato entre o charuto e quem o aprecia.", en: "The lighting is not a formality. It is the beginning of a contract between the cigar and the one who savours it." } },
-  { id: "art-2", cat: "The Craft", title: { pt: "Cada folha carrega uma decisão", en: "Every leaf carries a decision" }, img: "assets/photography/process-cut-cigars.jpeg",
+  { id: "art-2", cat: "The Craft", title: { pt: "Cada folha carrega uma decisão", en: "Every leaf carries a decision" }, img: "assets/photography/tobacco-leaves-macro.jpeg",
     summary: { pt: "Da plantação ao enrolamento, cada etapa é uma escolha deliberada. O long filler não é um detalhe técnico — é uma declaração.", en: "From planting to rolling, every step is a deliberate choice. Long filler is not a technical detail — it is a declaration." } },
 ];
 
@@ -37,7 +37,7 @@ function ArticleRow({ a, flip, delay }) {
 }
 
 function JournalPage() {
-  const HERO = "assets/photography/moment-lounge-hands.jpeg";
+  const HERO = "assets/photography/lounge-interior.jpeg";
   const SUB = [
     { id: "jr-top", label: "Journal" },
     { id: "art-0", label: "The Lounge" },
@@ -55,9 +55,9 @@ function JournalPage() {
       </section>
       <ContentRail surface="sand" label={L("Continue a explorar", "Continue exploring")} title={L("Mais da casa Nicoletti.", "More from the house of Nicoletti.")}
         items={[
-          { img: "assets/photography/process-cut-cigars.jpeg", label: L("A Coleção", "The Collection"), title: L("Quatro famílias, dez referências.", "Four families, ten references."), href: "A Coleção.html" },
-          { img: "assets/photography/cigar-smoke-wood.jpeg", label: L("Heritage", "Heritage"), title: L("Cruz das Almas.", "Cruz das Almas."), href: "Heritage.html" },
-          { img: "assets/photography/cigar-lighter-dark.jpeg", label: L("The Club", "The Club"), title: L("Por convite.", "By invitation."), href: "The Club.html" },
+          { img: "assets/photography/box-presentation.jpeg", label: L("A Coleção", "The Collection"), title: L("Quatro famílias, dez referências.", "Four families, ten references."), href: "A Coleção.html" },
+          { img: "assets/photography/balcony.jpeg", label: L("Heritage", "Heritage"), title: L("Cruz das Almas.", "Cruz das Almas."), href: "Heritage.html" },
+          { img: "assets/photography/lounge-piano.jpeg", label: L("The Club", "The Club"), title: L("Por convite.", "By invitation."), href: "The Club.html" },
         ]} />
     </PageShell>
   );

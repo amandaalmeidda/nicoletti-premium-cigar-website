@@ -382,12 +382,12 @@ function ExploreFurther({ cards }) {
 
 /* ====================== EXPERIENCE PAGE (assembled) ====================== */
 function ExperiencePage() {
-  const HERO = "assets/photography/moment-lounge-hands.jpeg";
+  const HERO = "assets/photography/gold-detail.jpeg";
   const families = [
-    { name: "Nirvana Supreme", gauge: { pt: "Ring 52 · Suavidade", en: "Ring 52 · Softness" }, img: "assets/photography/cigar-smoke-wood.jpeg", blurb: { pt: "O primeiro tempo da noite. Cedro e creme, uma suavidade que convida — a entrada na coleção.", en: "The opening movement of the night. Cedar and cream, a softness that invites — the entry into the collection." } },
-    { name: "Gold Selection", gauge: { pt: "Ring 52/56 · Equilíbrio", en: "Ring 52/56 · Balance" }, img: "assets/photography/cigar-lighter-dark.jpeg", blurb: { pt: "O centro da coleção. Presença solar e intensidade média — onde o DNA cubano e o dulçor baiano se encontram.", en: "The heart of the collection. Solar presence and medium intensity — where Cuban DNA and Bahian sweetness meet." } },
-    { name: "Borogod Supreme", gauge: { pt: "Ring 58 · Caráter", en: "Ring 58 · Character" }, img: "assets/photography/moment-lounge-hands.jpeg", blurb: { pt: "A assinatura brasileira. Couro, frutas secas, corpo cheio — presença imediata, sem pedir licença.", en: "The Brazilian signature. Leather, dried fruit, full body — immediate presence, asking no permission." } },
-    { name: "Platinum Selection", gauge: { pt: "Ring 60 · Reserva", en: "Ring 60 · Reserve" }, img: "assets/photography/process-cut-cigars.jpeg", blurb: { pt: "O cume da coleção. Final longo, complexidade, reserva absoluta — para noites que não contam o tempo.", en: "The summit of the collection. A long finish, complexity, absolute reserve — for nights that do not count the hours." } },
+    { name: "Nirvana Supreme", gauge: { pt: "Ring 52 · Suavidade", en: "Ring 52 · Softness" }, img: "assets/photography/product-silk.png", blurb: { pt: "O primeiro tempo da noite. Cedro e creme, uma suavidade que convida — a entrada na coleção.", en: "The opening movement of the night. Cedar and cream, a softness that invites — the entry into the collection." } },
+    { name: "Gold Selection", gauge: { pt: "Ring 52/56 · Equilíbrio", en: "Ring 52/56 · Balance" }, img: "assets/photography/gold-detail.jpeg", blurb: { pt: "O centro da coleção. Presença solar e intensidade média — onde o DNA cubano e o dulçor baiano se encontram.", en: "The heart of the collection. Solar presence and medium intensity — where Cuban DNA and Bahian sweetness meet." } },
+    { name: "Borogod Supreme", gauge: { pt: "Ring 58 · Caráter", en: "Ring 58 · Character" }, img: "assets/photography/product-smoke-warm.png", blurb: { pt: "A assinatura brasileira. Couro, frutas secas, corpo cheio — presença imediata, sem pedir licença.", en: "The Brazilian signature. Leather, dried fruit, full body — immediate presence, asking no permission." } },
+    { name: "Platinum Selection", gauge: { pt: "Ring 60 · Reserva", en: "Ring 60 · Reserve" }, img: "assets/photography/product-black.png", blurb: { pt: "O cume da coleção. Final longo, complexidade, reserva absoluta — para noites que não contam o tempo.", en: "The summit of the collection. A long finish, complexity, absolute reserve — for nights that do not count the hours." } },
   ];
   return (
     <PageShell heroImg={HERO}>
@@ -399,7 +399,7 @@ function ExperiencePage() {
           L("Descubra como ler, acender e apreciar um Nicoletti, ou fale com o atelier para encontrar a referência do seu momento.", "Discover how to read, light and savour a Nicoletti, or speak with the atelier to find the reference for your moment."),
         ]}
         cta={L("Fale com o atelier", "Speak with the atelier")} ctaHref="Contact.html" />
-      <ThreePhotos imgs={["assets/photography/process-cut-cigars.jpeg", "assets/photography/cigar-smoke-wood.jpeg", "assets/photography/moment-lounge-hands.jpeg"]} />
+      <ThreePhotos imgs={["assets/photography/cigar-burl.jpeg", "assets/photography/cigar-smoke.jpeg", "assets/photography/cigar-ashtray.jpeg"]} />
       <TextButton screenLabel="Experience — Three Thirds"
         label={L("Os Três Terços", "The Three Thirds")}
         title={L("Como ler um Nicoletti", "How to read a Nicoletti")}
@@ -407,7 +407,7 @@ function ExperiencePage() {
           L("Todo Nicoletti se revela em três tempos. O primeiro terço anuncia a intenção; o meio revela o blend por completo; o final é a promessa cumprida — o sabor que permanece depois da última tragada.", "Every Nicoletti reveals itself in three movements. The first third announces the intention; the middle reveals the blend in full; the finish is the promise fulfilled — the flavour that lingers after the final draw."),
         ]}
         cta={L("Ver a coleção", "View the collection")} ctaHref="A Coleção.html" />
-      <FullPhoto img="assets/photography/cigar-smoke-wood.jpeg" screenLabel="Experience — Full Photo I" />
+      <FullPhoto img="assets/photography/brand-crest.png" screenLabel="Experience — Full Photo I" />
       <TextOnly screenLabel="Experience — Red & Black"
         label={L("A Lógica das Capas", "The Logic of the Wrappers")}
         title="Red & Black"
@@ -415,7 +415,7 @@ function ExperiencePage() {
         paras={[
           L("A Red — natural — abre a noite com fluidez e dulçor. A Black — madura — aprofunda-a com gravidade, cacau e silêncio. A escolha não é de força. É de momento.", "The Red — natural — opens the night with fluidity and sweetness. The Black — maduro — deepens it with gravity, cocoa and silence. The choice is not of strength. It is of moment."),
         ]} />
-      <FullPhoto img="assets/photography/cigar-lighter-dark.jpeg" screenLabel="Experience — Full Photo II" />
+      <FullPhoto img="assets/photography/lineup.png" screenLabel="Experience — Full Photo II" />
       <OxbloodText screenLabel="Experience — The Ritual"
         label={L("O Ritual", "The Ritual")}
         title={L("O primeiro fósforo da noite.", "The first match of the night.")}
@@ -425,7 +425,7 @@ function ExperiencePage() {
         ]}
         cta={L("Conheça o clube", "Discover the club")} ctaHref="The Club.html" />
       <PeekSlider dark screenLabel="Experience — Pairing Slider"
-        imgs={["assets/photography/cigar-lighter-dark.jpeg", "assets/photography/cigar-smoke-wood.jpeg", "assets/photography/process-cut-cigars.jpeg", "assets/photography/moment-lounge-hands.jpeg"]}
+        imgs={["assets/photography/pairing.png", "assets/photography/pairing2.png", "assets/photography/product-silk.png", "assets/photography/ritual-cut.png"]}
         label={L("Harmonização", "Pairing")}
         title={L("O par exato", "The exact pairing")}
         body={L("Vinho do Porto, single malt, café de origem. A cada capa, um par — e a cada momento, o seu. O atelier indica o encontro exato.", "Vintage Port, single malt, single-origin coffee. To each wrapper, a pairing — and to each moment, its own. The atelier advises the exact meeting.")} />
@@ -464,7 +464,7 @@ function ExperiencePage() {
           L("Diga-nos o momento — uma noite, uma celebração, um presente — e o atelier indica a referência exata. Cada Nicoletti chega por encontro, não por catálogo.", "Tell us the moment — an evening, a celebration, a gift — and the atelier will advise the exact reference. Every Nicoletti arrives by meeting, not by catalogue."),
         ]}
         cta={L("Fale com o atelier", "Speak with the atelier")} ctaHref="Contact.html" />
-      <FullPhoto img="assets/photography/process-cut-cigars.jpeg" screenLabel="Experience — Full Photo III" />
+      <FullPhoto img="assets/photography/box-presentation.jpeg" screenLabel="Experience — Full Photo III" />
       <TextVideo
         label={L("Inspiração", "Inspiration")}
         title={L("Tudo começa com a atenção", "It all begins with attention")}
@@ -473,11 +473,11 @@ function ExperiencePage() {
         ]}
         src="assets/video/hero-03.mp4" />
       <VerticalSlider label={L("A Galeria", "The Gallery")} title={L("A casa Nicoletti", "The house of Nicoletti")}
-        imgs={["assets/photography/cigar-lighter-dark.jpeg", "assets/photography/moment-lounge-hands.jpeg", "assets/photography/cigar-smoke-wood.jpeg", "assets/photography/process-cut-cigars.jpeg"]} />
+        imgs={["assets/photography/lineup.png", "assets/photography/enjoy2.png", "assets/photography/pairing2.png", "assets/photography/lounge-sax.jpeg"]} />
       <ExploreFurther cards={[
-        { img: "assets/photography/cigar-smoke-wood.jpeg", label: { pt: "Herança", en: "Heritage" }, title: { pt: "Cruz das Almas, a origem.", en: "Cruz das Almas, the origin." }, href: "Heritage.html" },
-        { img: "assets/photography/process-cut-cigars.jpeg", label: { pt: "A Coleção", en: "The Collection" }, title: { pt: "Quatro famílias, dez referências.", en: "Four families, ten references." }, href: "A Coleção.html" },
-        { img: "assets/photography/cigar-lighter-dark.jpeg", label: { pt: "O Clube", en: "The Club" }, title: { pt: "Não há ingresso. Há convite.", en: "There is no ticket. There is an invitation." }, href: "The Club.html" },
+        { img: "assets/photography/tobacco-field.jpeg", label: { pt: "Herança", en: "Heritage" }, title: { pt: "Cruz das Almas, a origem.", en: "Cruz das Almas, the origin." }, href: "Heritage.html" },
+        { img: "assets/photography/box-presentation.jpeg", label: { pt: "A Coleção", en: "The Collection" }, title: { pt: "Quatro famílias, dez referências.", en: "Four families, ten references." }, href: "A Coleção.html" },
+        { img: "assets/photography/enjoy1.png", label: { pt: "O Clube", en: "The Club" }, title: { pt: "Não há ingresso. Há convite.", en: "There is no ticket. There is an invitation." }, href: "The Club.html" },
       ]} />
     </PageShell>
   );

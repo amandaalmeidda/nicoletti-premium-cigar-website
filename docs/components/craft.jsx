@@ -11,7 +11,7 @@ function SeedSection() {
   return (
     <section className="surface-light" data-screen-label="Craft — The Seed" style={{ padding: "clamp(110px,12vw,170px) clamp(24px,5vw,80px)", boxSizing: "border-box" }}>
       <div style={{ maxWidth: 1080, margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 1fr", gap: "clamp(40px,6vw,96px)", alignItems: "center" }} className="craft-2col">
-        <Reveal style={{ width: "100%", aspectRatio: "4 / 5", backgroundImage: "url(assets/photography/cigar-smoke-wood.jpeg)", backgroundSize: "cover", backgroundPosition: "center", filter: "grayscale(.06)" }} />
+        <Reveal style={{ width: "100%", aspectRatio: "4 / 5", backgroundImage: "url(assets/photography/tobacco-leaves-macro.jpeg)", backgroundSize: "cover", backgroundPosition: "center", filter: "grayscale(.06)" }} />
         <Reveal delay={120} style={{ maxWidth: 460 }}>
           <SectionLabel align="left">{L("A Semente", "The Seed")}</SectionLabel>
           <h2 className="t-h2" style={{ color: "var(--color-espresso)", margin: "20px 0 24px", fontSize: "clamp(30px,3.4vw,46px)", textWrap: "balance" }}>{L("DNA cubano, escolhido a dedo.", "Cuban DNA, chosen by hand.")}</h2>
@@ -61,7 +61,7 @@ function AnatomySection() {
       </Reveal>
 
       <div style={{ maxWidth: 1080, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: "clamp(40px,6vw,88px)", alignItems: "center" }} className="craft-2col">
-        <Reveal style={{ width: "100%", aspectRatio: "4 / 5", backgroundImage: "url(assets/photography/process-cut-cigars.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+        <Reveal style={{ width: "100%", aspectRatio: "4 / 5", backgroundImage: "url(assets/photography/tobacco-drying.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }} />
         <Reveal delay={120} style={{ display: "flex", flexDirection: "column" }}>
           {CRAFT_TIERS.map((t, i) => (
             <div key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "clamp(18px,2vw,30px)", padding: "26px 0", borderTop: i ? "1px solid rgba(31,23,24,.14)" : "none" }}>
@@ -136,7 +136,7 @@ function EngineeringSection() {
 
 /* ====================== CRAFT PAGE (assembled) ====================== */
 function CraftPage() {
-  const HERO = "assets/photography/process-cut-cigars.jpeg";
+  const HERO = "assets/photography/tobacco-plantation.jpeg";
   return (
     <PageShell heroImg={HERO}>
       <InnerHero
@@ -151,7 +151,7 @@ function CraftPage() {
         quote={L("Antes do ritual, antes da mesa — há uma folha.", "Before the ritual, before the table — there is a leaf.")} />
       <SeedSection />
       <FeatureScroll
-        img="assets/photography/cigar-lighter-dark.jpeg"
+        img="assets/photography/tobacco-field.jpeg"
         screenLabel="Craft — The Soil"
         label={L("O Solo", "The Soil")}
         title={L("O que Cuba não consegue replicar.", "What Cuba cannot replicate.")}
@@ -167,9 +167,9 @@ function CraftPage() {
         quote={L("Dez referências nascem de uma só disciplina.", "Ten references born of a single discipline.")} />
       <ContentRail surface="sand" label={L("Continue", "Continue")} title={L("A casa, por inteiro.", "The house, in full.")}
         items={[
-          { img: "assets/photography/cigar-smoke-wood.jpeg", label: L("A Coleção", "The Collection"), title: L("Quatro famílias, dez referências.", "Four families, ten references."), href: "A Coleção.html" },
-          { img: "assets/photography/moment-lounge-hands.jpeg", label: L("Herança", "Heritage"), title: L("O trabalho de uma vida.", "A lifetime in the making."), href: "Heritage.html" },
-          { img: "assets/photography/cigar-lighter-dark.jpeg", label: L("O Clube", "The Club"), title: L("Não há ingresso. Há convite.", "There is no ticket. There is an invitation."), href: "The Club.html" },
+          { img: "assets/photography/box-presentation.jpeg", label: L("A Coleção", "The Collection"), title: L("Quatro famílias, dez referências.", "Four families, ten references."), href: "A Coleção.html" },
+          { img: "assets/photography/balcony.jpeg", label: L("Herança", "Heritage"), title: L("O trabalho de uma vida.", "A lifetime in the making."), href: "Heritage.html" },
+          { img: "assets/photography/lounge-interior.jpeg", label: L("O Clube", "The Club"), title: L("Não há ingresso. Há convite.", "There is no ticket. There is an invitation."), href: "The Club.html" },
         ]} />
     </PageShell>
   );

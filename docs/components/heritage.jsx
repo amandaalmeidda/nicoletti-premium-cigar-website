@@ -187,10 +187,10 @@ function LoungeInvite() {
 
 /* ---------- 6 · Photo slider + text ---------- */
 const HSLIDES = [
-  "assets/photography/moment-lounge-hands.jpeg",
-  "assets/photography/cigar-smoke-wood.jpeg",
-  "assets/photography/cigar-lighter-dark.jpeg",
-  "assets/photography/process-cut-cigars.jpeg",
+  "assets/photography/lounge-interior.jpeg",
+  "assets/photography/balcony.jpeg",
+  "assets/photography/lounge-vinyl.jpeg",
+  "assets/photography/lounge-sax.jpeg",
 ];
 function HeritageSlider() {
   const [i, setI] = useState(0);
@@ -262,9 +262,9 @@ function LegacyCard({ card, delay }) {
 }
 function LegacyCards() {
   const cards = [
-    { img: "assets/photography/cigar-smoke-wood.jpeg", title: { pt: "Cruz das Almas", en: "Cruz das Almas" }, blurb: { pt: "O solo do Recôncavo Baiano onde o DNA cubano encontrou um dulçor que não existe em mais nenhum lugar.", en: "The soil of the Recôncavo Baiano where Cuban DNA found a sweetness that exists nowhere else." }, cta: { pt: "A terra", en: "The land" }, action: () => navTo("A Coleção.html") },
-    { img: "assets/photography/process-cut-cigars.jpeg", title: { pt: "O Ofício", en: "The Craft" }, blurb: { pt: "Semente cubana, solo baiano, 100% long filler enrolado à mão. Da folha à brasa.", en: "Cuban seed, Bahian soil, 100% long filler rolled by hand. From leaf to ember." }, cta: { pt: "O ofício", en: "The craft" }, action: () => navTo("The Craft.html") },
-    { img: "assets/photography/moment-lounge-hands.jpeg", title: { pt: "O Lounge", en: "The Lounge" }, blurb: { pt: "Não há ingresso, há convite. O acesso à coleção começa por um encontro.", en: "There is no ticket, there is an invitation. Access to the collection begins with a meeting." }, cta: { pt: "Saber mais", en: "Learn more" }, action: () => navTo("The Club.html") },
+    { img: "assets/photography/tobacco-field.jpeg", title: { pt: "Cruz das Almas", en: "Cruz das Almas" }, blurb: { pt: "O solo do Recôncavo Baiano onde o DNA cubano encontrou um dulçor que não existe em mais nenhum lugar.", en: "The soil of the Recôncavo Baiano where Cuban DNA found a sweetness that exists nowhere else." }, cta: { pt: "A terra", en: "The land" }, action: () => navTo("A Coleção.html") },
+    { img: "assets/photography/tobacco-drying.jpeg", title: { pt: "O Ofício", en: "The Craft" }, blurb: { pt: "Semente cubana, solo baiano, 100% long filler enrolado à mão. Da folha à brasa.", en: "Cuban seed, Bahian soil, 100% long filler rolled by hand. From leaf to ember." }, cta: { pt: "O ofício", en: "The craft" }, action: () => navTo("The Craft.html") },
+    { img: "assets/photography/lounge-interior.jpeg", title: { pt: "O Lounge", en: "The Lounge" }, blurb: { pt: "Não há ingresso, há convite. O acesso à coleção começa por um encontro.", en: "There is no ticket, there is an invitation. Access to the collection begins with a meeting." }, cta: { pt: "Saber mais", en: "Learn more" }, action: () => navTo("The Club.html") },
   ];
   return (
     <section className="surface-light" data-screen-label="Heritage — Legacy Cards" style={{ padding: "clamp(120px,12vw,170px) clamp(24px,5vw,80px)", boxSizing: "border-box" }}>
@@ -281,7 +281,7 @@ function LegacyCards() {
 
 /* ====================== HERITAGE PAGE (assembled) ====================== */
 function HeritagePage() {
-  const HERO = "assets/photography/cigar-smoke-wood.jpeg";
+  const HERO = "assets/photography/balcony.jpeg";
   return (
     <PageShell heroImg={HERO}>
       <HeritageHero />
@@ -294,9 +294,9 @@ function HeritagePage() {
       <LegacyCards />
       <ContentRail surface="sand" label={L("Do Journal", "From the Journal")} title={L("A continuação da noite.", "The continuation of the night.")}
         items={[
-          { img: "assets/photography/moment-lounge-hands.jpeg", label: L("The Lounge", "The Lounge"), title: L("Onde as noites não têm pressa.", "Where the nights are in no hurry."), href: "Journal.html" },
-          { img: "assets/photography/cigar-smoke-wood.jpeg", label: L("The Ritual", "The Ritual"), title: L("O primeiro fósforo da noite.", "The first match of the night."), href: "Journal.html" },
-          { img: "assets/photography/process-cut-cigars.jpeg", label: L("The Craft", "The Craft"), title: L("Cada folha carrega uma decisão.", "Every leaf carries a decision."), href: "Journal.html" },
+          { img: "assets/photography/lounge-vinyl.jpeg", label: L("The Lounge", "The Lounge"), title: L("Onde as noites não têm pressa.", "Where the nights are in no hurry."), href: "Journal.html" },
+          { img: "assets/photography/cigar-flame.jpeg", label: L("The Ritual", "The Ritual"), title: L("O primeiro fósforo da noite.", "The first match of the night."), href: "Journal.html" },
+          { img: "assets/photography/tobacco-leaves-macro.jpeg", label: L("The Craft", "The Craft"), title: L("Cada folha carrega uma decisão.", "Every leaf carries a decision."), href: "Journal.html" },
         ]} />
     </PageShell>
   );

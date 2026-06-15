@@ -13,10 +13,10 @@ const SV = (props) => { const C = window.ScrollVideo; return C ? <C {...props} /
 /* Asset rotation — four photographs, four films; offset per model so each page
    reads distinctly. Placeholders until dedicated model photography arrives. */
 const DET_P = [
-  "assets/photography/cigar-smoke-wood.jpeg",
-  "assets/photography/cigar-lighter-dark.jpeg",
-  "assets/photography/moment-lounge-hands.jpeg",
-  "assets/photography/process-cut-cigars.jpeg",
+  "assets/photography/product-silk.png",
+  "assets/photography/product-smoke.png",
+  "assets/photography/product-smoke-warm.png",
+  "assets/photography/product-black.png",
 ];
 const DET_V = ["assets/video/hero-01.mp4", "assets/video/hero-02.mp4", "assets/video/hero-03.mp4", "assets/video/hero-moment.mp4"];
 const detRot = (r, k) => DET_P[(r + k) % DET_P.length];

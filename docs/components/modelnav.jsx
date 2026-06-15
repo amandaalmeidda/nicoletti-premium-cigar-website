@@ -6,10 +6,10 @@ const { useState, useEffect } = React;
 
 // Each "model" is a cigar line. Pulls intro/ringline/cigars from FAMILIES (collection.jsx).
 const MODELS = [
-  { id: "nirvana",  label: "Nirvana Supreme",   hero: "assets/photography/cigar-smoke-wood.jpeg",    headline: { pt: "O primeiro tempo da noite.", en: "The opening movement of the night." } },
-  { id: "gold",     label: "Gold Selection",    hero: "assets/photography/cigar-lighter-dark.jpeg",  headline: { pt: "Onde o equilíbrio acontece.", en: "Where balance is found." } },
-  { id: "borogod",  label: "Borogod Supreme",   hero: "assets/photography/moment-lounge-hands.jpeg", headline: { pt: "A assinatura brasileira.", en: "The Brazilian signature." } },
-  { id: "platinum", label: "Platinum Selection", hero: "assets/photography/process-cut-cigars.jpeg", headline: { pt: "O cume da coleção.", en: "The summit of the collection." } },
+  { id: "nirvana",  label: "Nirvana Supreme",   hero: "assets/photography/product-silk.png",    headline: { pt: "O primeiro tempo da noite.", en: "The opening movement of the night." } },
+  { id: "gold",     label: "Gold Selection",    hero: "assets/photography/gold-detail.jpeg",  headline: { pt: "Onde o equilíbrio acontece.", en: "Where balance is found." } },
+  { id: "borogod",  label: "Borogod Supreme",   hero: "assets/photography/product-black.png", headline: { pt: "A assinatura brasileira.", en: "The Brazilian signature." } },
+  { id: "platinum", label: "Platinum Selection", hero: "assets/photography/product-smoke.png", headline: { pt: "O cume da coleção.", en: "The summit of the collection." } },
 ];
 
 const famById = (id) => (window.FAMILIES || []).find((f) => f.id === id) || {};

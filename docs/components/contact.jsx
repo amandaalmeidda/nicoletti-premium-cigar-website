@@ -110,7 +110,7 @@ function ContactForm() {
 }
 
 function ContactPage() {
-  const HERO = "assets/photography/cigar-lighter-dark.jpeg";
+  const HERO = "assets/photography/lounge-interior.jpeg";
   return (
     <PageShell heroImg={HERO}>
       <section data-screen-label="Contact — Opening" style={{ position: "relative", minHeight: "66vh", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", background: "var(--color-near-black)" }}>
