@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicoletti — The Club</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/i18n.jsx"></script>
+<script type="text/babel" src="components/primitives.jsx"></script>
+<script type="text/babel" src="components/Header.jsx"></script>
+<script type="text/babel" src="components/Footer.jsx"></script>
+<script type="text/babel" src="components/shared.jsx"></script>
+<script type="text/babel" src="components/rr.jsx"></script>
+<script type="text/babel" src="components/club.jsx"></script>
+
+<script type="text/babel">
+  const HERO = "assets/photography/cigar-lighter-dark.jpeg";
+
+  function ClubPage() {
+    const SUB = [
+      { id: "club-top", label: L("O Convite", "The Invitation") },
+      { id: "caminhos", label: L("Os Caminhos", "The Paths") },
+      { id: "registrar", label: L("Registrar", "Register") },
+    ];
+    return (
+      <PageShell heroImg={HERO}>
+        <div id="club-top"><InnerHero img={HERO} screenLabel="The Club — Opening" /></div>
+        <SubNav items={SUB} />
+        <SentenceScreen surface="light" quote={L("Não há ingresso. Há convite.", "There is no ticket. There is an invitation.")} minHeight="62vh" screenLabel="Sentence" />
+        <FeatureScroll screenLabel="O Lounge"
+          img="assets/photography/moment-lounge-hands.jpeg"
+          label={L("O Lounge Nicoletti", "The Nicoletti Lounge")}
+          title={L("Onde as noites não têm pressa.", "Where the nights are in no hurry.")}
+          body={L("O Lounge Nicoletti é o primeiro passo — um encontro antes de qualquer coleção. No Brasil, o acesso acontece por parcerias e conversas.", "The Nicoletti Lounge is the first step — a meeting before any collection. In Brazil, access happens through partnerships and conversations.")} />
+        <div id="caminhos"><TwoPaths /></div>
+        <SentenceScreen surface="dark" quote={L("O primeiro passo é sempre uma conversa.", "The first step is always a conversation.")} minHeight="58vh" screenLabel="Sentence" />
+        <div id="registrar"><LoungeForm /></div>
+        <ContentRail surface="sand" label={L("Enquanto isso", "In the meantime")} title={L("Conheça a casa.", "Discover the house.")}
+          items={[
+            { img: "assets/photography/cigar-smoke-wood.jpeg", label: L("Heritage", "Heritage"), title: L("A história de Franco.", "The story of Franco."), href: "Heritage.html" },
+            { img: "assets/photography/process-cut-cigars.jpeg", label: L("A Coleção", "The Collection"), title: L("As dez referências.", "The ten references."), href: "A Coleção.html" },
+            { img: "assets/photography/moment-lounge-hands.jpeg", label: L("Journal", "Journal"), title: L("A continuação da noite.", "The continuation of the night."), href: "Journal.html" },
+          ]} />
+      </PageShell>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  const renderApp = () => root.render(<ClubPage />);
+  window.__langSubs.add(renderApp);
+  renderApp();
+</script>
+</body>
+</html>

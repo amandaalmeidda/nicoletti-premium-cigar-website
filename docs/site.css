@@ -1,0 +1,91 @@
+/* Nicoletti — shared site interaction + layout styles for all inner pages. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
+html, body { margin: 0; padding: 0; background: var(--color-near-black); }
+::selection { background: var(--gold-20); }
+img { display: block; }
+
+/* Gentle scroll-snap — sections settle into view; proximity keeps tall ones scrollable. */
+section { scroll-snap-align: start; scroll-snap-stop: normal; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Reveal entrance — content is visible by default; animates FROM hidden. Pure CSS
+   so it can never be left invisible (print/PDF/headless safe). */
+@keyframes revealUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+.reveal-up { animation: revealUp 720ms cubic-bezier(0.4,0,0.2,1) both; }
+
+/* Menu */
+.menu-item-row:hover { color: var(--color-gold) !important; transform: translateX(8px) !important; }
+.menu-close:hover { opacity: 1; transform: rotate(90deg); transition: transform 200ms ease; }
+
+/* Sub-nav */
+.subnav-item:hover { color: var(--color-gold) !important; }
+
+/* Language switcher */
+.lang-opt:hover { opacity: 1 !important; }
+
+/* Custom subject dropdown (Contact) */
+.subject-opt:hover { background: rgba(164,99,42,.09) !important; }
+
+/* Experience side-slider image crossfade */
+@keyframes expFade { from { opacity: 0.25; } to { opacity: 1; } }
+.exp-fade { animation: expFade 700ms cubic-bezier(0.22,1,0.36,1) both; }
+
+/* Model nav (RR-style two-tier, collection) */
+.modelnav-toggle:hover span { color: var(--color-gold); transition: color 200ms ease; }
+.enquire-link:hover { color: var(--color-off-white) !important; }
+.model-switch-item:hover { color: var(--color-tobacco) !important; border-bottom-color: rgba(164,99,42,.4) !important; }
+
+/* Dark form fields — modal on near-black. Underline only, light text. */
+.field-dark {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(245,240,232,.28);
+  border-radius: 0;
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-off-white);
+  transition: border-color 200ms ease;
+}
+.field-dark:focus { outline: none; border-bottom-color: var(--color-gold); }
+.field-dark::placeholder { color: rgba(245,240,232,.42); }
+
+/* Content rails (RR "related models" pattern) */
+.rail-scroller { scrollbar-width: none; -ms-overflow-style: none; }
+.rail-scroller::-webkit-scrollbar { display: none; }
+.rail-scroller:active { cursor: grabbing; }
+.rail-arrow {
+  width: 52px; height: 52px; border: 1px solid rgba(201,164,107,.4); background: transparent;
+  color: var(--color-off-white); font-size: 18px; cursor: pointer; border-radius: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 250ms ease, border-color 250ms ease, color 250ms ease;
+}
+.rail-arrow:hover { border-color: var(--color-gold); color: var(--color-gold); background: rgba(201,164,107,.06); }
+.rail-arrow-light { color: var(--color-espresso); border-color: rgba(31,23,24,.3); }
+.rail-arrow-light:hover { border-color: var(--color-tobacco); color: var(--color-tobacco); background: rgba(164,99,42,.06); }
+
+/* Footer */
+.footer-link { transition: opacity 200ms ease, color 200ms ease; }
+.footer-link:hover { opacity: 1 !important; color: var(--color-gold) !important; }
+.social-link { transition: opacity 200ms ease; }
+.social-link:hover { opacity: 0.9 !important; }
+
+/* Responsive — collapse multi-column grids (matches inline grid templates) */
+@media (max-width: 860px) {
+  [style*="repeat(2, 1fr)"] { grid-template-columns: 1fr !important; }
+  [style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
+  [style*="minmax(120px"] { grid-template-columns: 1fr !important; }
+  .origin-dossier { grid-template-columns: 1fr 1fr !important; gap: 28px 24px !important; }
+  .craft-2col { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .craft-steps { grid-template-columns: 1fr 1fr !important; gap: 28px 24px !important; }
+  header { padding: 16px 24px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *[style*="animation"] { animation: none !important; }
+  .reveal-up { animation: none !important; }
+  html { scroll-behavior: auto; scroll-snap-type: none; }
+}

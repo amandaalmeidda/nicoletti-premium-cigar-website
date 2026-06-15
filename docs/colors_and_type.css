@@ -1,0 +1,349 @@
+/* ============================================================
+   NICOLETTI PREMIUM CIGARS — Color & Type Foundations
+   Version 2.5 — FINAL PALETTE — Olmeda Studio
+   "Nicoletti não se anuncia. É encontrado."
+   ------------------------------------------------------------
+   Three backgrounds, alternating rhythm:
+     Warm White  #FAF8F5  ~50%   light editorial
+     Near Black  #0A0806  ~35%   cinematic / product
+     Soft Sand   #EDE5DC  ~15%   warm transitions
+   Crimson #8B1A1A is the signature — crest & product only, ~10%.
+   Three typefaces, no substitutions:
+     Cormorant Garamond — emotion / display
+     Montserrat         — structure / function
+     Pinyon Script      — Franco's signature only
+   ============================================================ */
+
+/* Loaded from Google Fonts CDN. For PRODUCTION, self-host these
+   (font-display: swap) per Technical Standards §17. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;1,300;1,500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap');
+
+:root {
+  /* ---------- COLOR · Backgrounds (the three + footer) ---------- */
+  --color-warm-white:   #FAF8F5; /* dominant light background — ~50% */
+  --color-soft-sand:    #EDE5DC; /* transitional warm background — ~15% */
+  --color-near-black:   #0A0806; /* dominant dark background — ~35% */
+  --color-footer:       #111010; /* footer only — near-black charcoal */
+
+  /* ---------- COLOR · Typography ---------- */
+  --color-off-white:    #F5F0E8; /* text on dark / over photography */
+  --color-espresso:     #1F1718; /* primary type colour — warm near-black */
+  --color-smoke-gray:   #DAD7D2; /* captions, legal, availability labels */
+
+  /* ---------- COLOR · Accents ---------- */
+  --color-gold:         #C9A46B; /* all CTAs, dividers, labels — ~5% */
+  --color-antique-gold: #B8960C; /* crest filigree & heraldic detail only — <2% */
+  --color-crimson:      #8B1A1A; /* signature — crest shield & product only — ~10% */
+  --color-tobacco:      #A4632A; /* warm secondary — subheads, link hover — ~5% */
+
+  /* ---------- COLOR · Semantic roles ---------- */
+  --bg:               var(--color-warm-white);
+  --bg-sand:          var(--color-soft-sand);  /* warm transition sections */
+  --bg-dark:          var(--color-near-black);  /* cinematic / product */
+  --bg-footer:        var(--color-footer);
+  --fg:               var(--color-espresso);   /* body / headings on light */
+  --fg-on-dark:       var(--color-off-white);  /* text on dark / photo */
+  --fg-muted:         var(--color-smoke-gray);  /* captions, legal */
+  --accent:           var(--color-gold);
+  --accent-warm:      var(--color-tobacco);     /* link hover, sublabels */
+  --signature:        var(--color-crimson);     /* crest & product only */
+  --hairline:         var(--color-gold);
+  --border-input:     var(--color-smoke-gray);
+
+  /* gold used as translucent overlay tints */
+  --gold-10:  rgba(201, 164, 107, 0.10); /* ghost button hover fill */
+  --gold-15:  rgba(201, 164, 107, 0.15);
+  --gold-20:  rgba(201, 164, 107, 0.20); /* title-screen hairline border */
+  --gold-25:  rgba(201, 164, 107, 0.25); /* footer divider */
+
+  /* near-black scrims for the overlay menu & sub-nav */
+  --scrim-menu:    rgba(10, 8, 6, 0.92);  /* full-screen menu overlay */
+  --scrim-subnav:  rgba(10, 8, 6, 0.92);  /* sticky collection sub-nav */
+  --tobacco-overlay: rgba(10, 8, 6, 0.92); /* alias — retained for back-compat */
+
+  /* ---------- TYPE · Families ---------- */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', system-ui, sans-serif;
+  --font-script:  'Pinyon Script', cursive;
+
+  /* Cormorant weights */
+  --weight-cg-light:    300;
+  --weight-cg-medium:   500;
+  --weight-cg-semibold: 600;
+  /* Montserrat weights */
+  --weight-mont-light:    300;
+  --weight-mont-regular:  400;
+  --weight-mont-medium:   500;
+  --weight-mont-semibold: 600;
+
+  /* ---------- SPACING · 8pt scale ---------- */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  48px;
+  --space-xl:  96px;
+  --space-2xl: 160px;
+
+  /* ---------- LAYOUT ---------- */
+  --max-width:  1440px;
+  --content:    1440px;
+  --gutter:     24px;
+  --margin-desktop: 80px;
+  --margin-tablet:  40px;
+  --margin-mobile:  24px;
+  --bp-tablet:  768px;
+  --bp-desktop: 1024px;
+  --bp-wide:    1440px;
+
+  /* ---------- RADIUS ---------- */
+  --radius-sharp:    0px;  /* buttons, inputs, images, badges */
+  --radius-card:     2px;  /* journal cards — almost square */
+  --radius-overlay:  4px;  /* tooltip / dropdown — minimal only */
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-card:     0 2px 12px rgba(0,0,0,0.06);
+  --shadow-elevated: 0 4px 24px rgba(0,0,0,0.10);
+  --shadow-inset:    inset 0 1px 3px rgba(0,0,0,0.08);
+  --text-shadow-photo: 0 2px 5px rgba(0,0,0,0.30);
+
+  /* ---------- MOTION ---------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --dur-page:   400ms; /* @kind other */
+  --dur-reveal: 600ms; /* @kind other */
+  --dur-image:  800ms; /* @kind other */
+  --dur-nav:    200ms; /* @kind other */
+  --dur-link:   150ms; /* @kind other */
+  --dur-card:   300ms; /* @kind other */
+}
+
+/* ============================================================
+   BASE TYPE STYLES — semantic
+   Cormorant for emotion · Montserrat for structure · Pinyon for Franco
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-mont-regular);
+  color: var(--fg);
+  background: var(--bg);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* H1 — Hero. Cormorant Light Italic, on photography always */
+.t-h1, h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: var(--weight-cg-light);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--fg-on-dark);
+  text-shadow: var(--text-shadow-photo);
+}
+
+/* H2 — Section opener on dark backgrounds. Cormorant Light */
+.t-h2, h2 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.5vw, 56px);
+  font-weight: var(--weight-cg-light);
+  font-style: normal;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+/* H3 — Sub on light backgrounds. Cormorant Medium */
+.t-h3, h3 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: var(--weight-cg-medium);
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: var(--fg);
+}
+
+/* Pull quote — Cormorant Light Italic */
+.t-pullquote {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: var(--weight-cg-light);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+/* Body — Montserrat Regular */
+.t-body, p {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: var(--weight-mont-regular);
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+/* Section label — Montserrat SemiBold caps, gold */
+.t-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--weight-mont-semibold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Caption — Montserrat Regular */
+.t-caption {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: var(--weight-mont-regular);
+  letter-spacing: 0.02em;
+  color: var(--fg-muted);
+}
+
+/* Menu item — Montserrat Light, wide caps (header context) */
+.t-menu {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: var(--weight-mont-light);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* CTA text — Montserrat SemiBold caps */
+.t-cta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: var(--weight-mont-semibold);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/* Nav trigger — "MENU" */
+.t-nav-trigger {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: var(--weight-mont-medium);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Franco's signature — Pinyon Script, gold, NO letter-spacing */
+.t-signature {
+  font-family: var(--font-script);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   GHOST BUTTON — the only button. Transparent, 1px gold, 0 radius.
+   No solid fills. No pills. Ever.
+   ============================================================ */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: var(--weight-mont-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  padding: 14px 32px;
+  border-radius: var(--radius-sharp);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--dur-nav) var(--ease-standard);
+}
+.btn-ghost:hover { background: var(--gold-10); }
+.btn-ghost .arrow { transition: transform var(--dur-nav) var(--ease-standard); }
+.btn-ghost:hover .arrow { transform: translateX(4px); }
+
+/* Text link — Montserrat, tobacco */
+.link-text {
+  color: var(--color-tobacco);
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color var(--dur-link) var(--ease-standard);
+}
+.link-text:hover { color: var(--color-gold); }
+
+/* ============================================================
+   FORM FIELDS — underline only, 0 radius
+   ============================================================ */
+.field {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-input);
+  border-radius: var(--radius-sharp);
+  padding: 12px 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-espresso);
+  transition: border-color var(--dur-nav) var(--ease-standard);
+}
+.field:focus { outline: none; border-bottom-color: var(--color-gold); }
+.field::placeholder { opacity: 0.5; }
+
+/* ============================================================
+   SURFACES — the three backgrounds + footer.
+   Alternating rhythm rule: never two darks back to back without a
+   light moment between, and never two lights without a dark cinematic
+   moment between. Contrast is what gives each section its impact.
+   ============================================================ */
+
+/* Warm White — ~50%. Light editorial copy, sentence screens, Journal. */
+.surface-light {
+  background: var(--color-warm-white);
+  color: var(--color-espresso);
+}
+.surface-light .t-label { color: var(--color-gold); }
+
+/* Near Black — ~35%. Hero carousel, product moments, cinematic sections. */
+.surface-dark {
+  background: var(--color-near-black);
+  color: var(--color-off-white);
+}
+.surface-dark .t-h1,
+.surface-dark .t-h2,
+.surface-dark .t-h3 { color: var(--color-off-white); }
+.surface-dark .t-body,
+.surface-dark p { color: rgba(245, 240, 232, 0.80); }
+.surface-dark .t-label { color: var(--color-gold); }
+
+/* Soft Sand — ~15%. Bahia transition, detail contexts, CTA invitations.
+   Note: on Soft Sand, accents are Tobacco/Espresso — never Gold text. */
+.surface-sand {
+  background: var(--color-soft-sand);
+  color: var(--color-espresso);
+}
+.surface-sand .t-body,
+.surface-sand p { color: rgba(31, 23, 24, 0.80); }
+.surface-sand .t-label { color: var(--color-tobacco); }
+.surface-sand .btn-ghost {
+  border-color: var(--color-espresso);
+  color: var(--color-espresso);
+}
+.surface-sand .btn-ghost:hover { background: rgba(31, 23, 24, 0.06); }
+
+/* Footer — near-black charcoal #111010. Footer only. */
+.surface-footer {
+  background: var(--color-footer);
+  color: var(--color-off-white);
+}
+
+/* ============================================================
+   CREST SHIELD — the only place Crimson lives in the architecture.
+   Crimson is a guest, not a host: never a section background, never a
+   button fill, never in the footer. Crest shield & product photography
+   bring it themselves.
+   ============================================================ */
+.crest-shield { color: var(--color-crimson); }
+.crest-filigree { color: var(--color-antique-gold); }
